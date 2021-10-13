@@ -1,0 +1,148 @@
+/* Common Styles*/
+/* Navbar*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@font-face {
+  font-family: AstroSpace;
+  src: url(/fonts/AstroSpace.ttf);
+}
+html {
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1F2833;
+    margin: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  /*max-width: 100%;*/
+}
+
+header {
+  background-color: #0B0C10;
+}
+
+.main-nav {
+  height: 90px;
+}
+#nav {
+    z-index: 9999;
+}
+
+.logo {
+  color: #45A29E;
+  line-height: 90px;
+  font-size: 40px;
+  text-decoration: ;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 30px;
+  font-family: "AstroSpace", sans-serif;
+}
+
+.navlinks {
+  list-style: none;
+  float: right;
+  line-height: 90px;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks li {
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+.navlinks li a {
+  color: #66FCF1;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.1s linear 0s;
+  text-transform: uppercase;
+}
+
+.navlinks li a:hover {
+  color: #45A29E;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #45A29E;
+}
+
+li a.contact {
+  background-color: #45A29E;
+  color: #0B0C10;
+  padding: 9px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+  border-bottom: none;
+}
+
+li a.contact:hover {
+  background-color: #0B0C10;
+  color: #45A29E;
+  border-bottom: none;
+}
+
+#check {
+  display: none;
+}
+
+.menu-btn {
+  font-size: 25px;
+  color: #45A29E;
+  float: right;
+  line-height: 90px;
+  margin-right: 40px;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .navlinks {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: all 0.5s;
+    right: -100%;
+    background: #272727;
+    z-index: 9999;
+  }
+
+  .navlinks li {
+    display: block;
+  }
+
+  .navlinks li a {
+    font-size: 20px;
+  }
+
+  .navlinks li a:hover {
+    border-bottom: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  #check:checked ~ .navlinks {
+    right: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo {
+    margin-left: 10px;
+    font-size: 25px;
+  }
+
+  .menu-btn {
+    margin-right: 10px;
+    font-size: 25px;
+  }
+
+  .menu-btn:focus {
+    color: blue;
+  }
+}

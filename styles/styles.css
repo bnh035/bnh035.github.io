@@ -1,16 +1,8 @@
-/*
-TODO:
------
-Darkmode button
-Store variables as json
-Common style file
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
 @font-face {
   font-family: AstroSpace;
-  src: url(/fonts/AstroSpace.ttf);
+  src: url(HTML_EXTRA_FILES = /fonts/AstroSpace.ttf);
 }
 
 :root {
@@ -21,7 +13,21 @@ Common style file
 	--navbar-color: #0B0C10;
 	--main-text-color: #C5C6C7;
 	--hover-color: #45A29E;
-	--alt-text-color:  #272727;
+	--toggle-background: #D5D5D5;
+	--toggle-highlight: #9600CC;
+	--navbar-color1: #272727;
+}
+
+[data-theme="dark"]{
+	--color: #000000;
+	--transition-time: 0.1s;
+	--background-color: #D5D5D5;
+	--highlight-color: #9600CC;
+	--navbar-color: #0B0C10;
+	--main-text-color: #000;
+	--hover-color: #AE5ACD;
+	--toggle-background: #1F2833;
+	--toggle-highlight: #66FCF1;
 }
 
 html {
@@ -170,11 +176,15 @@ recipe-wrapper {
 }
 
 #nav {
-    z-index: 9999;
+  z-index: 9999;
+}
+
+.main-nav .div {
+	display: inline-block;
 }
 
 .logo {
-  color: var(--hover-color);
+  color: var(--highlight-color);
   line-height: 90px;
   font-size: 40px;
   text-decoration: ;
@@ -208,7 +218,7 @@ recipe-wrapper {
 .navlinks li a:hover {
   color: var(--hover-color);
   padding-bottom: 7px;
-  border-bottom: 2px solid #45A29E;
+  border-bottom: 2px solid var(--hover-color);
 }
 
 li a.contact {
@@ -224,6 +234,69 @@ li a.contact:hover {
   background-color: var(--navbar-color);
   color: var(--hover-color);
   border-bottom: none;
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+	display: inline-block;
+	float: right;
+	margin: 36px 20px;
+	align-items: center;
+	justify-content: right;
+}
+
+.theme-switch-wrapper em {
+	margin-left: 10px;
+	font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 35px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: var(--toggle-background);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: var(--toggle-highlight);
+  bottom: 1px;
+  content: "";
+  height: 18px;
+  left: 1px;
+  position: absolute;
+  transition: .4s;
+  width: 18px;
+}
+
+input:checked + .slider {
+  background-color: var(--toggle-background);
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 #check {
@@ -248,7 +321,7 @@ li a.contact:hover {
     text-align: center;
     transition: all 0.5s;
     right: -100%;
-    background: var(--alt-text-color);
+    background: var(--navbar-color1);
     z-index: 9999;
   }
 
@@ -386,7 +459,7 @@ a {
 	top: 0.5em;
 	right: 0;
 	font-size: 0.75em;
-	color: #66FCF1;
+	color: var(--highlight-color);
 	font-size: 0.75em;
 	padding: 0 0.5em;
 	margin-right: 0.5em;

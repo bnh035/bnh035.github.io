@@ -8,6 +8,18 @@
 :root {
 	--color: #000000;
 	--transition-time: 0.1s;
+	--background-color: #2E3438;
+	--highlight-color: #00A250;
+	--navbar-color: #0B0C10;
+	--main-text-color: #C5C6C7;
+	--hover-color: #00CE66;
+	--toggle-background: #D5D5D5;
+	--toggle-highlight: #9600CC;
+	--navbar-color1: #272727;
+	--card-background-color: #373D41;	
+	/*
+	--color: #000000;
+	--transition-time: 0.1s;
 	--background-color: #1F2833;
 	--highlight-color: #66FCF1;
 	--navbar-color: #0B0C10;
@@ -16,6 +28,8 @@
 	--toggle-background: #D5D5D5;
 	--toggle-highlight: #9600CC;
 	--navbar-color1: #272727;
+	--card-background-color: #272727;
+	*/
 }
 
 [data-theme="dark"]{
@@ -28,6 +42,8 @@
 	--hover-color: #AE5ACD;
 	--toggle-background: #1F2833;
 	--toggle-highlight: #66FCF1;
+	--navbar-color1: #272727;
+	--card-background-color: #272727;
 }
 
 html {
@@ -43,6 +59,10 @@ body {
 	min-height: 100vh;
 	font-family: 'Open Sans';
 	max-width: 100%;
+}
+
+img-gray {
+  filter: grayscale(100%);
 }
 
 header {
@@ -62,12 +82,13 @@ recipe-wrapper {
 	--bg-filter-opacity: 0.5;
 	background-color: var(--background-color);
 	text-align: center;
-	width: 40em;
+	width: 60%;
 	padding: 1em;
 	margin-left: auto;
 	margin-right: auto;
 	min_width: 600px;
-	/*display: flex;
+	/*
+	display: flex;
 	height: 20em;
 	font-size: 1.5em;
 	border-radius: 0.5em;
@@ -79,7 +100,8 @@ recipe-wrapper {
 	position: relative;
 	overflow: hidden;
 	border: 0px solid #ccc;
-	text-decoration: none;*/
+	text-decoration: none;
+	*/
 }
 
 .blog-paragraph h1 {
@@ -92,17 +114,18 @@ recipe-wrapper {
 	--bg-filter-opacity: 0.5;
 	background-color: var(--background-color);
 	text-align: center;
-	width: 40em;
+	/*width: 40em;*/
 	padding: 1em;
 	margin-left: auto;
 	margin-right: auto;
-	min_width: 600px;
-	/*display: flex;
-	height: 20em;
-	font-size: 1.5em;
-	border-radius: 0.5em;
+	min-width: 600px;
+	width: 50vw;
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	/*height: 20em;*/
+	/*font-size: 1.5em;*/
+	/*border-radius: 0.5em;*/
+	align-items: center;
 	background-size: cover;
 	background-position: center;
 	transition: all, var(--transition-time);
@@ -126,6 +149,7 @@ recipe-wrapper {
 	color: var(--main-text-color);
 	vertical-align: top;
 	font-size: 1em;
+	min_width: 900px;
 }
 
 .blog-paragraph ul {
@@ -222,7 +246,7 @@ recipe-wrapper {
 }
 
 li a.contact {
-  background-color: var(--hover-color);
+  background-color: var(--highlight-color);
   color: var(--navbar-color);
   padding: 9px 20px;
   border-radius: 5px;
@@ -232,7 +256,7 @@ li a.contact {
 
 li a.contact:hover {
   background-color: var(--navbar-color);
-  color: var(--hover-color);
+  color: var(--highlight-color);
   border-bottom: none;
 }
 
@@ -305,7 +329,7 @@ input:checked + .slider:before {
 
 .menu-btn {
   font-size: 25px;
-  color: var(--hover-color);
+  color: var(--highlight-color);
   float: right;
   line-height: 90px;
   margin-right: 40px;
@@ -396,13 +420,13 @@ a {
 .card {
 	font-family: 'Heebo';
 	--bg-filter-opacity: 0.5;
-	background-color: var(--background-color);
+	background-color: var(--card-background-color);/*var(--background-color);*/
 	background-image: "images/gears.jpg";
 	height: 20em;
 	width: 15em;
 	font-size: 1.5em;
 	color: var(--main-text-color);
-	border-radius: 0.5em;
+	border-radius: 0em;
 	padding: 1em;
 	display: flex;
 	align-items: flex-end;
@@ -411,7 +435,7 @@ a {
 	transition: all, var(--transition-time);
 	position: relative;
 	overflow: hidden;
-	border: 0px solid #ccc;
+	border: 0px solid var(--card-background-color);
 	text-decoration: none;
 }
 
@@ -474,6 +498,7 @@ a {
 	height: 200px;
 	width: 15em;
 	border-radius: 0rem;
+	filter: grayscale(100%);
 }
 
 .card:before, .card:after {

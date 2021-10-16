@@ -69,6 +69,12 @@ header {
   background-color: var(--navbar-color);
 }
 
+.myPlot {
+	margin: 10px 10px;
+	width: 400px !important;
+	height: 400px !important;
+}
+
 recipe-wrapper {
 	display: grid;
 	justify-content: center;

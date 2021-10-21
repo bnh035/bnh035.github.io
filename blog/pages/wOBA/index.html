@@ -15,6 +15,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
 		<script type="text/javascript" src="../../../scripts/scripts.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 	</head>
 	<body>
 		<header>
@@ -29,7 +30,7 @@
 					<li><a href="../../../blog/index.html">Blog</a></li>
 					<li><a href="../../../project/index.html">Projects</a></li>
 					<li><a href="../../../about/index.html">About</a></li>
-					<li><a href="../../../contact/index.html" class="contact">Contact</a></li>contact">Contact</a></li>
+					<li><a href="../../../contact/index.html" class="contact">Contact</a></li>
 				</ul>
 				<div class="theme-switch-wrapper">
 					<label class="theme-switch" for="checkbox">
@@ -39,10 +40,73 @@
 				</div>
 			</nav>
 		</header>
-		<div>
-			<img src="images/wOBAPlot.png">
-			<img src="images/polar_woba.png">
-			<img src="images/smoothed_woba.png">
+		<div class="stat-wrapper">
+			<div class="stat-header">
+				<div class="lp">
+					blog | baseball
+				</div>
+				<hr>
+				<date>
+					18 October 2021
+				</date><br>
+				<div class="lp">
+					<div class="tag-div">
+						<div class="tag">
+							<a href="../../../blog/index.html">Baseball</a>
+						</div>
+						<div class="tag">
+							<a href="../../../blog/index.html">Statistics</a>
+						</div>
+						<div class="tag">
+							<a href="../../../blog/index.html">Python</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h1>
+					What is wOBA and why is it useful?
+					</h1>
+				</div>
+			</div>
+			<div class="img-div">
+				<img src="images/wOBAPlotD.png" id="wobaImage1" class="title-img">
+			</div>
+			<div class="stat-body">
+				<h2>
+					The Value of a Hit
+				</h2>
+				<p>
+					Not all hits are made equal, some are worth a lot more than others. For instance a home run with loaded bases scores 4 runs, where as a pop up with 3 outs ends any further scoring for that innings. This raises the question of how do we determine the value of a hit and how often a batter produces valuable hits. One of the possible metrics is wOBA or weighted On Base Average. This metric weights the productive outcomes of an at bat with a value that represents the relative value of the individual outcomes. The possible productive outcomes of an at bat are:
+				</p>
+				<ul>
+					<li>uBB - unintentional Base on Balls (walks)</li>
+					<li>HBP - Hit By Pitch</li>
+					<li>1B  - Singles</li>
+					<li>2B  - Doubles</li>
+					<li>3B  - Triples</li>
+					<li>HR  - Home Runs</li>
+				</ul>
+				<p class="mathsEq">
+					$$ {wOBA = \frac{0.69 \times uBB+0.72 \times HBP+0.89 \times 1B+1.27 \times 2B+1.62 \times 3B+2.10 \times HR}{AB+BB-IBB+SF+HBP}} $$
+				</p>
+				<p>
+					sadffgsdfsgsdfvsdfvsdfvsvdfv
+					vsdfvsdfvsdfvsdfvsdfvsdvfsdfvsfd
+					vsdfvsdfvsdfvsdfvsdfv
+					sfdvsdfvsfdvsdfvsdfbsfdvws
+					efdvsfvsefdvsefvwerfgvwegvwervesfvv
+					sadffgsdfsgsdfvsdfvsdfvsvdfv
+					vsdfvsdfvsdfvsdfvsdfvsdvfsdfvsfd
+					vsdfvsdfvsdfvsdfvsdfv
+					sfdvsdfvsfdvsdfvsdfbsfdvws
+					efdvsfvsefdvsefvwerfgvwegvwervesfvv
+					sadffgsdfsgsdfvsdfvsdfvsvdfv
+					vsdfvsdfvsdfvsdfvsdfvsdvfsdfvsfd
+					vsdfvsdfvsdfvsdfvsdfv
+					sfdvsdfvsfdvsdfvsdfbsfdvws
+					efdvsfvsefdvsefvwerfgvwegvwervesfvv
+				</p>
+			</div>
 		</div>
 	</body>
 </html>

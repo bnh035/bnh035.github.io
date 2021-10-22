@@ -78,7 +78,7 @@
 				<p>
 					Not all hits are made equal, some are worth a lot more than others. For instance a home run with loaded bases scores 4 runs, where as a pop up with 3 outs ends any further scoring for that innings. This raises the question of how do we determine the value of a hit and how often a batter produces valuable hits. One of the possible metrics is wOBA or weighted On Base Average. This metric weights the productive outcomes of an at bat with a value that represents the relative value of the individual outcomes. The possible productive outcomes of an at bat are:
 				</p>
-				<ul>
+				<ul class="bigFont">
 					<li>uBB - unintentional Base on Balls (walks)</li>
 					<li>HBP - Hit By Pitch</li>
 					<li>1B  - Singles</li>
@@ -86,25 +86,17 @@
 					<li>3B  - Triples</li>
 					<li>HR  - Home Runs</li>
 				</ul>
-				<p class="mathsEq">
-					$$ {wOBA = \frac{0.69 \times uBB+0.72 \times HBP+0.89 \times 1B+1.27 \times 2B+1.62 \times 3B+2.10 \times HR}{AB+BB-IBB+SF+HBP}} $$
+				<h2>
+					States of a Baseball Game
+				</h2>
+				<p>
+					There are 3 possible outs that an inning can be in when a hit occurs, either 0, 1, or 2 outs. There are also 8 states for the occupied bases: 000, 100, 010, 001, 110, 011, 101, 111, where 0 represents an unoccupied base, 1 represents an occupied base, and the position in the 3 digit number refers to the base number. This gives a total 24 states that a baseball innings can be in, ignoring the state with 3 outs, which would make 25 states.
 				</p>
 				<p>
-					sadffgsdfsgsdfvsdfvsdfvsvdfv
-					vsdfvsdfvsdfvsdfvsdfvsdvfsdfvsfd
-					vsdfvsdfvsdfvsdfvsdfv
-					sfdvsdfvsfdvsdfvsdfbsfdvws
-					efdvsfvsefdvsefvwerfgvwegvwervesfvv
-					sadffgsdfsgsdfvsdfvsdfvsvdfv
-					vsdfvsdfvsdfvsdfvsdfvsdvfsdfvsfd
-					vsdfvsdfvsdfvsdfvsdfv
-					sfdvsdfvsfdvsdfvsdfbsfdvws
-					efdvsfvsefdvsefvwerfgvwegvwervesfvv
-					sadffgsdfsgsdfvsdfvsdfvsvdfv
-					vsdfvsdfvsdfvsdfvsdfvsdvfsdfvsfd
-					vsdfvsdfvsdfvsdfvsdfv
-					sfdvsdfvsfdvsdfvsdfbsfdvws
-					efdvsfvsefdvsefvwerfgvwegvwervesfvv
+					The value of ahit is dependant on the state of the game, for instance the exact same single to right field is more valuable when there are loaded bases compared to if there was nobody on base
+				</p>
+				<p class="mathsEq">
+					$$ {wOBA = \frac{0.69 \times uBB+0.72 \times HBP+0.89 \times 1B+1.27 \times 2B+1.62 \times 3B+2.10 \times HR}{AB+BB-IBB+SF+HBP}} $$
 				</p>
 			</div>
 		</div>

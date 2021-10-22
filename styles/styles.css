@@ -11,27 +11,39 @@
 	--transition-time: 0.1s;
 	--background-color: #2E3438;
 	--highlight-color: #00A250;
-	--navbar-color: #0B0C10;
+	--navbar-color: #000;
 	--main-text-color: #C5C6C7;
 	--hover-color: #00CE66;
 	--toggle-background: #D5D5D5;
-	--toggle-highlight: #9600CC;
+	--toggle-highlight: #0A2030;
 	--navbar-color1: #272727;
 	--card-background-color: #373D41;	
+	--paraPX: 20px;
+	--paraVW: 4vw;
+	--link-path-color: #777777;
+	--card-radius: 0em;
+	--card-border-thickness: 0px;
+	--card-border-color: rgba(0, 0, 0, 0);
 }
 
 [data-theme="dark"]{
-	--color: #000000;
+	--color: #FFFFFF;
 	--transition-time: 0.1s;
-	--background-color: #D5D5D5;
-	--highlight-color: #9600CC;
-	--navbar-color: #0B0C10;
+	--background-color: #c4c4c4;
+	--highlight-color: #00A250;
+	--navbar-color: #000;
 	--main-text-color: #000;
 	--hover-color: #AE5ACD;
 	--toggle-background: #2E3438;
 	--toggle-highlight: #00A250;
 	--navbar-color1: #272727;
-	--card-background-color: #272727;
+	--card-background-color: #FFFFFF;
+	--paraPX: 20px;
+	--paraVW: 4vw;
+	--link-path-color: #000000;
+	--card-radius: 1em;
+	--card-border-thickness: 2px;
+	--card-border-color: #000;
 }
 
 /* General page style */
@@ -198,7 +210,7 @@ a {
 }
 
 /* Recipe page styles */
-recipe-wrapper {
+.recipe-wrapper {
 	display: grid;
 	justify-content: center;
 	align-items: top;
@@ -429,7 +441,7 @@ input:checked + .slider:before {
 	width: 15em;
 	font-size: 1.5em;
 	color: var(--main-text-color);
-	border-radius: 0em;
+	border-radius: var(--card-radius);
 	padding: 1em;
 	display: flex;
 	align-items: flex-end;
@@ -438,7 +450,7 @@ input:checked + .slider:before {
 	transition: all, var(--transition-time);
 	position: relative;
 	overflow: hidden;
-	border: 0px solid var(--card-background-color);
+	border: var(--card-border-thickness) solid var(--card-border-color);
 	text-decoration: none;
 }
 
@@ -447,6 +459,7 @@ input:checked + .slider:before {
 }
 
 .card h1 {
+	vertical-align: top;
 	margin: 0;
 	font-size: 1.5em;
 	line-height: 1.2em;
@@ -475,8 +488,8 @@ input:checked + .slider:before {
 }
 
 .card:hover .tags .tag {
-	background: black;
-	color: var(--main-text-color);
+	background: var(--highlight-color);
+	color: white;
 }
 
 .card .date {
@@ -525,13 +538,13 @@ input:checked + .slider:before {
 }
 
 .card:after {
-	background: var(--background-color);
+	background: var(--main-text-color);
 	width: 200%;
 	height: 200%;
 }
 
 .card:hover {
-  color: var(--color);
+  color: var(--background-color);
 }
 
 .card:hover:before, .card:hover:after {
@@ -599,6 +612,7 @@ input:checked + .slider:before {
 .stat-header {
 	font-family: 'Heebo';
 	width: 100%;
+	justify-content: center;
 }
 
 
@@ -633,17 +647,20 @@ h1 {
 	margin-left: 1%;
 }
 
-.stat-header .hr {
-	width: 85%;
+.stat-header hr {
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid var(--main-text-color);
 }
 
 .stat-body {
-	display: inline-block;
+	display: flex;
 	color: var(--main-text-color);
 	font-family: 'Heebo';
+	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -652,10 +669,19 @@ h1 {
 	font-size: min(1.35vw, 18px);
 }
 
+.stat-paragraph {
+	font-family: 'Heebo';
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
 p {
 	display: inline-block;
 	text-align: left;
-	font-size: min(20px, 4vw);
+	font-size:min(var(--paraPX), var(--paraVW));
 	text-align: justify;
 }
 
@@ -665,7 +691,7 @@ h2 {
 	vertical-align: top;
 	font-size: min(30px, 6vw);
 	text-align: center;
-	margin: 5% auto;
+	/*margin: 5% auto;*/
 	display: flex;
 	max: 80vw;
 	min-width: calc(320px - 5%);
@@ -676,8 +702,12 @@ h2 {
 	display: inline-block;
 	margin-top: 6px;
 	margin-left: 1%;
-	color: #777777;
+	color: var(--link-path-color);
 	font-size: min(12px, 3vw);
+}
+
+.bigFont li{
+	font-size:min(var(--paraPX), var(--paraVW));
 }
 
 .img-div {

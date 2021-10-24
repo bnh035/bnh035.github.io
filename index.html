@@ -39,8 +39,79 @@
 				</div>
 			</nav>
 		</header>
-		<div>
-			
-		</div>
+		<main class="front-page">
+			<div class="myInfo">
+				
+			</div>
+			<div class="summary">
+				<div class="tabs">
+					<div class="tab">
+						<button class="tablinks active" onclick="openCity(event, 'Home')" >Intro</button>
+						<button class="tablinks" onclick="openCity(event, 'Gallery')">Skills</button>
+						<button class="tablinks" onclick="openCity(event, 'About')">Projects</button>
+						<button class="tablinks" onclick="openCity(event, 'Contact')">Interests</button>
+					</div>
+
+					<div id="Home" class="tabcontent" style="display:block">
+						<p>
+							Since graduating with a B.Eng (Mech) and B.Math in 2016 I have worked as a mechanical engineer working on various projects including:
+						</p>
+						<ul>
+							<li>Small design tasks such as brackets,</li>
+							<li>Equipment enclosure design from both a mechanical and electrical perspective,</li>
+							<li>Lifting equipment design in accordance with AS1418,</li>
+							<li>Drawings using CAD programs.</li>
+						</ul>
+					</div>
+
+					<div id="Gallery" class="tabcontent">
+						<h3>Skills</h3>
+						<ul>
+							<li>Mechanical Design</li>
+							<li style="margin-left: 2em;">FEA and Stress Analysis using Strand7 and ANSYS.</li>
+							<li style="margin-left: 2em;">CAD, in particular, AutoCAD, Creo, Inventor, and Fusion360.</li>
+							<li style="margin-left: 2em;">Design for Manufactur.</li>
+							<li>Systems Engineering</li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+
+					<div id="About" class="tabcontent">
+						<h3>ABOUT</h3>
+						<p>About content....</p> 
+					</div>
+
+					<div id="Contact" class="tabcontent">
+						<h3 style="margin-bottom:10px">
+							Sport
+						</h3>
+						<p style="margin:0px">
+							In my spare time I enjoy playing baseball, snooker, and cricket. I have been following the San Fransisco Giants since I started playing baseball.
+						</p>
+						<h3 style="margin-bottom:10px">
+							Mathematics and Data
+						</h3>
+						<p style="margin:0px">
+							For as long as I can remember I have had an interest in numbers and patterns. This resulted in me completing a mathematics degree alongside my mechanical engineering degree. I particular like topics such as algebra, geometry, and topology alongside applied mathemics.
+						</p>
+						<h3 style="margin-bottom:10px">
+							Electronics
+						</h3>
+						<p style="margin:0px">
+							I often spend time working on electronics projects involving arduino, custom PCB design, filters, and microcontrollers.
+						</p>
+						<h3 style="margin-bottom:10px">
+							Software
+						</h3>
+						<p style="margin:0px">
+							Across a lot of my projects software development plays an important role, for instance this website.
+						</p>
+					</div>
+				</div>
+
+				<script src="test.js"></script>
+			</div>
+		</main>
 	</body>
 </html>
